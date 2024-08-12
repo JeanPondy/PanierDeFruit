@@ -1,22 +1,15 @@
-import { CommonModule, NgFor, NgIf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-fruitlist',
   standalone: true,
-  imports: [CommonModule, NgFor, NgIf],
+  imports: [CommonModule],
   templateUrl: './fruitlist.component.html',
   styleUrl: './fruitlist.component.scss'
 })
 export class FruitlistComponent {
-  users = [
-    { id: 1, name: 'John Doe', email: 'john@example.com' },
-    { id: 2, name: 'Jane Doe', email: 'jane@example.com' },
-    { id: 3, name: 'Alice Smith', email: 'alice@example.com' }
-  ];
-
-howIsWorks = 'bad';
-usernames: string[] = ['John Doe', 'Jane Doe', 'Alice Smith', 'Bob Brown', 'Charlie Black'];
+ 
 
   fruitlist = [
     {
@@ -25,7 +18,7 @@ usernames: string[] = ['John Doe', 'Jane Doe', 'Alice Smith', 'Bob Brown', 'Char
       description: "Äpfel sind aufgrund ihres hohen Wassergehalts kalorienarm und enthalten nur Spuren von Fett und Eiweiß, dafür aber rund zwei Prozent Ballaststoffe und etwa elf Prozent Kohlenhydrate. Äpfel enthalten auch viele Vitamine und Mineralstoffe und sind daher eine wichtige Quelle für uns - zum Beispiel für Vitamin C.",
       genus: "Kernobstgewächsen innerhalb der Familie der Rosengewächse",
       stars: 2.3,
-      reviews:[{name: "Kevin W.", text: "ist lecker"},{name: "Arne P.", text: "nicht so meins"}],
+      reviews:[],
     },
     {
       name: "Banane",
