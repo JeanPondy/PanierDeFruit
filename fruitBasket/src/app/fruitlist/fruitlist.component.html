@@ -2,7 +2,14 @@
   @for(singlefruit of fruitlist; track singlefruit.name; let index = $index){
 
   <!-- ---------------------    input     -------------------- -->
-  <app-singlefruit [fruit]="singlefruit"></app-singlefruit>
+  <!--  (mouseenter)="numberLog(index)"
+   (mouseover)="numberLog(index)" 
+   (click)="numberLog(index)" -->
+  <app-singlefruit
+    (click)="numberLog(index)"
+    (fruitName)="nameLog($event)"
+    [fruit]="singlefruit"
+  ></app-singlefruit>
 
   }
 </div>
