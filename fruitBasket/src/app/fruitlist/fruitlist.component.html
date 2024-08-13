@@ -15,7 +15,7 @@
     </div>
     -->
     <div>
-      @if(fruit.stars > 4){
+      @if(fruit.stars > 1){
       <img src="./assets/img/fruits/{{ fruit.img }}" alt="" srcset="" />
       } @else {Hopps}
     </div>
@@ -23,7 +23,10 @@
       <h2>{{ fruit.name }}</h2>
       <div>
         <p><b>Bewertung:</b></p>
+
         <div>
+          <!-- 08 - Praxis: @for, @if, @else  -->
+          <!-- schreibe hier ein switch case -->
           @for(count of [1,2,3,4,5]; track fruitlist ){ @if(fruit.stars >=
           count){
           <img src="./assets/img/stars/star.svg" alt="" srcset="" />
@@ -34,8 +37,25 @@
             alt=""
             srcset=""
           />} }
-
-          <p>({{ fruit.stars }})</p>
+          <!-- [ngStyle] / [ngStyle] (+ternaryOperator) 
+             <p
+            [ngStyle]="{
+              color: fruit.stars > 3 ? 'green' : 'red',
+              'background-color': fruit.stars > 3 ? 'white' : 'blue'
+            }"
+          >
+            ({{ fruit.stars }})
+          </p> -->
+          <!-- [ngClass] -->
+          <!--   <p [ngClass]="'fontColorBad bgColor '">({{ fruit.stars }})</p> -->
+          <p
+            [ngClass]="{
+              'fontColorBad ': fruit.stars < 3,
+              'fontColorGood ': fruit.stars >= 3
+            }"
+          >
+            ({{ fruit.stars }})
+          </p>
         </div>
       </div>
       <div><b>Art:</b><br />{{ fruit.genus }}</div>
