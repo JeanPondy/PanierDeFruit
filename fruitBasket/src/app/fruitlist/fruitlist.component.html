@@ -1,15 +1,20 @@
 <div class="fruitlist_content">
   @for(singlefruit of fruitlist; track singlefruit.name; let index = $index){
-
+  <app-singlefruit
+    (fruitName)="addComment($event, index)"
+    [fruit]="singlefruit"
+  ></app-singlefruit>
+  <!-- 18 -->
   <!-- ---------------------    input     -------------------- -->
   <!--  (mouseenter)="numberLog(index)"
    (mouseover)="numberLog(index)" 
    (click)="numberLog(index)" -->
-  <app-singlefruit
+
+  <!-- <app-singlefruit
     (click)="numberLog(index)"
     (fruitName)="nameLog($event)"
     [fruit]="singlefruit"
-  ></app-singlefruit>
+  ></app-singlefruit> -->
 
   }
 </div>

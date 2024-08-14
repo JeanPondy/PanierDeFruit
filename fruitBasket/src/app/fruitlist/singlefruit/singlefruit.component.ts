@@ -24,9 +24,10 @@ inputData = "";
 @Output()fruitName = new EventEmitter<string>();
 
 sendInputData(){
-  //this.fruitName.emit(this.fruit.name)
+  this.fruitName.emit(this.inputData)//18
+  this.inputData = "";
   //console.log(this.inputData);
-  this.inputData = "gibt ein comments"
+  //this.inputData = "gibt ein comments"
 }
 
 }

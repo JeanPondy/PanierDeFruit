@@ -63,10 +63,20 @@ export class FruitlistComponent {
     },
   ]
 
-  numberLog(index:number){
+    /* 18 */
+  addComment(comment:string, index:number){
+    //console.log(comment)// um zu testen ob es funktioniert
+    this.fruitlist[index].reviews.push({
+      name: "AmourLom",
+      text: comment,
+    })
+  }
+
+/*   numberLog(index:number){
     console.log(index);
   }
   nameLog(name:string){
     console.log(name);
-  }
+  } */
+
 }
