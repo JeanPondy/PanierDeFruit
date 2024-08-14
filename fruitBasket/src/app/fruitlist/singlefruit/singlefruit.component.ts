@@ -1,10 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {FormsModule } from '@angular/forms'
 
 
 @Component({
   selector: 'app-singlefruit',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './singlefruit.component.html',
   styleUrl: './singlefruit.component.scss'
 })
@@ -17,10 +18,15 @@ export class SinglefruitComponent {
   stars: 2.3,
   reviews:[{name: "Waldemar W.", text: "gut für Obstsalat"},{name: "Olaf P.", text: "Kann man mal machen"}],
 };
+/* input in Typescript */
+inputData = "";
 
 @Output()fruitName = new EventEmitter<string>();
 
-emitName(){
-  this.fruitName.emit(this.fruit.name)
+sendInputData(){
+  //this.fruitName.emit(this.fruit.name)
+  //console.log(this.inputData);
+  this.inputData = "gibt ein comments"
 }
+
 }
